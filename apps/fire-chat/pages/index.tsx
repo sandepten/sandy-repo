@@ -1,10 +1,13 @@
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
+import ContactCard from "../components/ContactCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
       <Head>
@@ -14,7 +17,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello from Sandeep!</h1>
+        <div className="px-4 py-6">
+          <h1 className="text-2xl font-bold">Chats</h1>
+          <div className="flex items-center justify-between mt-4">
+            <input
+              type="text"
+              placeholder="Search your chats"
+              className="w-full border-2 border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:border-gray-500"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col space-y-5 py-6 px-2">
+            <ContactCard
+              name="Shivani"
+              image="/default-profile.jpg"
+              lastTime="09:15"
+              chat={true}
+              message="Hey, how are you?"
+            />
+          </div>
+        </div>
       </main>
     </>
   );

@@ -16,7 +16,7 @@ const BottomNavbar: NextComponentType<NextPageContext, {}, Props> = (
     } else {
       setCurrentTab(pathname);
     }
-  }, []);
+  }, [pathname]);
   return (
     <div className="fixed bottom-0 flex w-full justify-around bg-white py-5">
       {/* <Heart color="#AE2983" weight="fill" size={32} /> */}

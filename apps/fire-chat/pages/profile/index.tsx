@@ -15,7 +15,7 @@ const Profile: NextPage = () => {
   return (
     <div className="px-4">
       <div className="flex items-center justify-between py-5 px-2">
-        <span>Logo</span>
+        <span>FCHAT</span>
         <Link href="/">
           <XCircle size={32} />
         </Link>
@@ -48,13 +48,15 @@ const Profile: NextPage = () => {
             <CaretRight size={20} />
           </div>
         </Link>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <Gear size={32} />
-            <p className="text-lg font-medium">Settings</p>
+        <Link href="/profile/settings">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <Gear size={32} />
+              <p className="text-lg font-medium">Settings</p>
+            </div>
+            <CaretRight size={20} />
           </div>
-          <CaretRight size={20} />
-        </div>
+        </Link>
       </div>
       <div className="flex items-center justify-between space-x-4 rounded-xl bg-gradient-to-r from-purple-300 to-purple-200 py-5 px-4">
         <div className="flex items-center space-x-4">
@@ -76,7 +78,7 @@ const Profile: NextPage = () => {
       <hr className="mx-auto w-[95%] bg-gray-600" />
       <div className="flex items-center justify-center space-x-1 py-6">
         <Copyright size={18} />
-        <span className="text-sm text-gray-600">Branding</span>
+        <span className="text-sm text-gray-600">FCHAT</span>
         <span className="text-sm text-gray-600">2023</span>
       </div>
     </div>
