@@ -3,14 +3,14 @@
   "name": "social-backend",
   "builds": [
     {
-      "src": "index.js",
+      "src": "dist/src/index.js",
       "use": "@now/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "index.js"
+      "src": "/api/(.*)",
+      "dest": "/dist/src/index.js"
     }
   ]
 }
