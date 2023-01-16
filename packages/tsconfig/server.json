@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "display": "Social Backend",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "noEmit": false,
+    "module": "commonjs",
+    "sourceMap": false
+  }
+}
